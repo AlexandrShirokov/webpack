@@ -4,20 +4,20 @@
   "description": "webpack",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env rimraf dist && NODE_ENV=production webpack --mode production",
+    "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
     "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlexandrShirokov/AlexandrShirokov.github.io-webpack-.git"
+    "url": "git+https://github.com/AlexandrShirokov/webpack"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AlexandrShirokov/AlexandrShirokov.github.io-webpack-/issues"
+    "url": "https://github.com/AlexandrShirokov/webpack/issues"
   },
-  "homepage": "https://github.com/AlexandrShirokov/AlexandrShirokov.github.io-webpack-#readme",
+  "homepage": "https://github.com/AlexandrShirokov/webpack#readme",
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
@@ -28,7 +28,7 @@
     "css-loader": "^3.6.0",
     "cssnano": "^4.1.10",
     "file-loader": "^6.0.0",
-    "gh-pages": "^3.1.0",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^4.3.0",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
