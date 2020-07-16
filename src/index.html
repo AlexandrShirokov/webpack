@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link href="<%=htmlWebpackPlugin.files.css %>" rel="stylesheet">
 </head>
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg')%>" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -39,7 +39,7 @@
 
     <div class="popup popup__add-popup">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close popup__close_add-popup">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close popup__close_add-popup">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form popup__add-form" name="add" novalidate>
             <input type="text" name="title" id="title" class="popup__input popup__input_type_title" placeholder="Название" minlength="2" maxlength="30" required>
@@ -52,7 +52,7 @@
     </div>
     <div class="popup popup__edit-popup">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close popup__close_edit-popup">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close popup__close_edit-popup">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form popup__edit-form" name="edit" novalidate>
             <input type="text" name="name" id ="name" class="popup__input popup__input_type_name" placeholder="Имя" minlength="2" maxlength="30" value="" required>
@@ -65,19 +65,13 @@
     </div>
     <div class="popup popup__image-popup">
       <div class="popup__content-image">
-        <img class="popup__close popup__close_image-popup" src="./images/close.svg" alt="">
+        <img class="popup__close popup__close_image-popup" src="<%=require('./images/close.svg')%>" alt="">
         <img class="popup__image" src="" alt="">
       </div>
     </div>
   </div>
 
-  <script src="Api.js"></script>
-  <script src="card.js"></script>
-  <script src="cardList.js"></script>
-  <script src="formValidator.js"></script>
-  <script src="popup.js"></script>
-  <script src="userInfo.js"></script>
-  <script src="index.js"></script>
+  <script src="<%=htmlWebpackPlugin.files.js%>"></script>
 
 </body>
 </html>
