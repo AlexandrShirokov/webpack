@@ -1,4 +1,4 @@
-class Api {
+export class Api {
   constructor(options) {
     this.options = options
     this.url = options.url;
@@ -20,7 +20,7 @@ class Api {
       }
        /** REVIEW: Можно лучше:
        *
-       * return Promise.reject(new Error(`Ошибка: ${res.status}`)); 
+       * return Promise.reject(new Error(`Ошибка: ${res.status}`));
        */
       return Promise.reject(res.status)
     })

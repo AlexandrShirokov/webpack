@@ -1,3 +1,11 @@
+import {Api} from './js/Api.js';
+import {Card} from './js/Card.js';
+import {CardList} from './js/CardList.js';
+import {FormValidator} from './js/FormValidator.js';
+import {Popup} from './js/Popup.js';
+import {UserInfo} from './js/UserInfo.js';
+import './pages/index.css';
+
 (function () {
   const placesList = document.querySelector('.places-list');
   const template = document.querySelector('.template').content.querySelector('.place-card');
@@ -21,8 +29,9 @@
     wrongLength: 'Должно быть от 2 до 30 символов',
     wrongUrl: 'Здесь должна быть ссылка',
   };
+  const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk' : 'https://praktikum.tk';
   const options = {
-    url: 'https://praktikum.tk/cohort11',
+    url: `${serverUrl}/cohort11`,
     headers: {
       authorization: 'fdddf0c7-ae72-4c3f-aa2e-a7c22604dc0a',
       'Content-Type': 'application/json'
@@ -111,15 +120,3 @@
   });
 
 })();
-
-
-/** REVIEW:
- *
- * В целом по работе:
- *
- * Все критические ошибки были исправлены, отличная работа! Спасибо за усилия и старания, удачи в следующем спринте и
- * успехов в дальнейшем обучении
- *
- * Можно лучше: 1) Повторяющийся код разбора ответа можно вынести в отдельный метод класса Api и переиспользовать для всех запросов
- * к API
- */
